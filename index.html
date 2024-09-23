@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>REAL PASION F.C</title>
+    <style>
+        .subir-imagenes {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(147, 20, 20, 0.1);
+            text-align: center;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+        .subir-imagenes h2 {
+            margin-bottom: 20px;
+        }
+        .subir-imagenes form {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        .subir-imagenes input[type="file"] {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .subir-imagenes button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .subir-imagenes button:hover {
+            background-color: #c0392b;
+        }
+        .gallery {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+            width: calc(33.33% - 10px); /* 3 imágenes por fila */
+        }
+        @media (max-width: 768px) {
+            .gallery img {
+                width: calc(50% - 10px); /* 2 imágenes por fila */
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery img {
+                width: 100%; /* 1 imagen por fila */
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- MENU -->
+    <div class="contenedor-header">
+        <header>
+            <h1>REAL<span class="txtRojo">PASION</span></h1>
+            <nav id="nav">
+                <a href="#inicio" onclick="seleccionar()">inicio</a>
+                <a href="#nosotros" onclick="seleccionar()">Nosotros</a>
+                <a href="#servicios" onclick="seleccionar()">Servicios</a>
+                <a href="#comodidades" onclick="seleccionar()">Comodidades</a>
+                <a href="#galeria" onclick="seleccionar()">Galería</a>
+                <a href="#equipo" onclick="seleccionar()">Equipo</a>
+                <a href="#contacto" onclick="seleccionar()">Contacto</a>
+                <a href="#subir-pdf" onclick="seleccionar()">Subir PDF</a>
+                <a href="#subir-imagenes" onclick="seleccionar()">Subir Imágenes</a>
+            </nav>
+            <div class="redes">
+                <a href="https://web.facebook.com/p/Real-Pasión-FC-100063746286057/?_rdc=1&_rdr"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://x.com/realpasionfcf?lang=es"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/real.pasionfc/"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+            <!-- Icono del menu responsive -->
+            <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>              
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-seccion">
+            <div class="info">
+                <h2>HAZ QUE <span class="txtRojo">OCURRA</span></h2>
+                <p>Triunfar es más facil de lo que piensas!</p>
+                <a href="#nosotros" class="btn-mas">
+                    <i class="fa-solid fa-circle-chevron-down"></i>
+                </a>
+            </div>
+            <div class="opciones">
+                <div class="opcion">01.FITNESS</div>
+                <div class="opcion">02.CATEGORIAS</div>
+                <div class="opcion">03.BOXING</div>
+                <div class="opcion">04.ENDURANCE</div>
+                <div class="opcion">05.YOGA</div>
+                <div class="opcion">06.CARDIO</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION NOSOTROS -->
+    <section id="nosotros" class="nosotros">
+        <div class="fila">
+            <div class="col">
+                <img src="img/img2.png" alt="">
+            </div>
+            <div class="col">
+                <div class="contenedor-titulo">
+                    <div class="numero">01</div>
+                    <div class="info">
+                        <span class="frase">LA MEJOR EXPERIENCIA</span>
+                        <h2>NOSOTROS</h2>
+                    </div>
+                </div>
+                <p class="p-especial">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur necessitatibus quod provident libero, nam corrupti, adipisci ea inventore cum aliquid asperiores pariatur harum sunt. Tempore expedita atque quos ipsum nisi.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="fila-nosotros">
+            <div class="col1">
+                <span class="frase"><span class="txtRojo">ENTRENA</span> DIFERENTE</span>
+                <h2>HAS <span class="txtRojo">PARTE DE </span> NOSOTROS!</h2>
+            </div>
+            <div class="col2">
+                <a href="login.html"><button>INICIA SESION!</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SERVICIOS -->
+    <section class="servicios" id="servicios">
+        <div class="contenido-seccion">
+            <div class="fila">
+                <div class="col">
+                    <div class="contenedor-titulo">
+                        <div class="numero">02</div>
+                        <div class="info">
+                            <span class="frase">LA MEJOR EXPERIENCIA</span>
+                            <h2>CATEGORIAS</h2>
+                        </div>
+                    </div>
+                    <p class="p-especial">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur necessitatibus quod provident libero, nam corrupti, adipisci ea inventore cum aliquid asperiores pariatur harum sunt. Tempore expedita atque quos ipsum nisi.</p>
+                </div>
+                <div class="col">
+                    <img src="img/img1.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="info-servicios">
+            <table>
+                <tr>
+                    <td>
+                        <i class="fa-solid fa-person-walkin"></i>
+                        <h3><span class="txtRojo">Sub </span>15 </h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis.</p>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-dumbbel"></i>
+                        <h3><span class="txtRojo">sub </span> 16</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis.</p>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-mitte"></i>
+                        <h3><span class="txtRojo">sub </span> 18</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <i class="fa-solid fa-cloc"></i>
+                        <h3><span class="txtRojo">Clase </span> mixta</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</p>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-heart-circle-bol"></i>
+                        <h3><span class="txtRojo">Clase </span> femenina</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</p>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-bicycl"></i>
+                        <h3><span class="txtRojo">Clases </span> porteros</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <div class="anuncios-container">
+        <button id="toggle-anuncios">Mostrar/Ocultar Anuncios</button>
+        <div class="anuncios" id="anuncios">
+            <div class="anuncio">
+                <h3>¡Promoción Especial!</h3>
+                <p>Obtén un 20% de descuento en tu primera compra.</p>
+                <a href="#" class="btn-anuncio">¡Aprovecha ahora!</a>
+            </div>
+            <div class="anuncio">
+                <h3>Nueva Colección</h3>
+                <p>Descubre nuestra nueva colección de productos.</p>
+                <a href="#" class="btn-anuncio">Ver más</a>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- SECCION COMODIDADES -->
+    <section id="comodidades" class="comodidades">
+        <div class="fila">
+            <div class="col">
+                <img src="img/img8.jpeg" alt="">
+            </div>
+            <div class="col">
+                <div class="contenedor-titulo">
+                    <div class="numero">03</div>
+                    <div class="info">
+                        <span class="frase">LA MEJOR EXPERIENCIA</span>
+                        <h2>PROYECCION</h2>
+                    </div>
+                </div>
+                <p class="p-especial">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <ul>
+                    <li><span>MISION</span> -Nuestra misión es proporcionar una educación integral en el fútbol, desarrollando habilidades técnicas, tácticas y físicas en nuestros jugadores, mientras fomentamos valores como la disciplina, el respeto, el trabajo en equipo y la perseverancia.  </li>
+                    <li><span>VISION</span> - Nuestra visión es convertirnos en una de las escuelas de fútbol más destacadas de la región, reconocida por su excelencia en la formación de jugadores y su contribución al desarrollo del fútbol en la comunidad. </li>
+                    <li><span>OBJETIVOS</span> - Desarrollar un programa de entrenamiento integral que abarque técnicas, tácticas y condición física.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION GALERIA -->
+    <section class="galeria" id="galeria">
+        <div class="contenido-seccion">
+            <div class="contenedor-titulo">
+                <div class="numero">04</div>
+                <div class="info">
+                    <span class="frase">LA MEJOR EXPERIENCIA</span>
+                    <h2>GALERIA</h2>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="col">
+                    <img src="img/WhatsApp Image 2024-09-16 at 9.08.32 AM.jpeg" alt="">
+                </div>
+                <div class="col">
+                    <img src="img/img1.png" alt="">
+                </div>
+                <div class="col">
+                    <img src="img/WhatsApp Image 2024-09-16 at 9.08.33 AM.jpeg" alt="">
+                </div>
+            </div>
+            <div class="fila">
+                <div class="col">
+                    <img src="img/WhatsApp Image 2024-09-16 at 9.08.34 AM.jpeg alt="">
+                </div>
+                <div class="col">
+                    <img src="img/WhatsApp Image 2024-09-16 at 9.08.36 AM (1).jpeg" alt="">
+                </div>
+                <div class="col">
+                    <img src="img/img8.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECCION EQUIPO -->
+    <section class="equipo" id="equipo">
+        <div class="contenido-seccion">
+            <div class="contenedor-titulo">
+                <div class="numero">05</div>
+                <div class="info">
+                    <span class="frase">LA MEJOR EXPERIENCIA</span>
+                    <h2>EQUIPO</h2>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="col">
+                    <img src="img/Captura de pantalla 2024-09-16 090103.png" alt="">
+                    <div class="info">
+                        <h2>MARCOS</h2>
+                        <p> </p>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="img/Captura de pantalla 2024-09-16 091549.png" alt="">
+                    <div class="info">
+                        <h2>MIGUEL</h2>
+                        <p></p>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="img/Captura de pantalla 2024-09-23 172348.png" alt="">
+                    <div class="info">
+                        <h2>ANDRES</h2>
+                        <p></p>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section class="contacto" id="contacto">
+        <div class="contenido-seccion">
+            <div class="contenedor-titulo">
+                <div class="numero">06</div>
+                <div class="info">
+                    <span class="frase">LA MEJOR EXPERIENCIA</span>
+                    <h2>CONTACTO</h2>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="col">
+                    <input type="text" placeholder="Ingrese Email">
+                </div>
+                <div class="col">
+                    <input type="text" placeholder="Ingrese Nombre">
+                </div>
+            </div>
+            <div class="mensaje">
+                <textarea cols="30" rows="10" placeholder="Ingresa el Mensaje"></textarea>
+                <button>Enviar Mensaje</button>
+            </div>
+            <div class="fila-datos">
+                <div class="col">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Funza, Cundinamarca
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-phone"></i>
+                    3187091197 - 3143050707
+                </div>
+                <div class="col">
+                    <i class="fa-regular fa-clock"></i>
+                    Lunes a Sábado, 8:00h - 24:00h
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SUBIR PDF -->
+    <section class="subir-pdf" id="subir-pdf">
+        <div class="contenido-seccion">
+            <div class="contenedor-titulo">
+                <div class="numero">07</div>
+                <div class="info">
+                    <span class="frase">Sube tu PDF</span>
+                    <h2>SUBIR PDF</h2>
+                </div>
+            </div>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                   <input type="file" name="pdf_file" accept="application/pdf" required>
+                <button type="submit">Subir PDF</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- SECCION SUBIR IMÁGENES -->
+    <section class="subir-imagenes" id="subir-imagenes">
+        <div class="contenido-seccion">
+            <div class="contenedor-titulo">
+                <div class="numero">08</div>
+                <div class="info">
+                    <span class="frase">Sube tu Imagen</span>
+                    <h2>SUBIR IMÁGENES</h2>
+                </div>
+            </div>
+            <form action="upload_image.php" method="post" enctype="multipart/form-data">
+                <input type="file" name="image_file" accept="image/*" required>
+                <button type="submit">Subir Imagen</button>
+            </form>
+            <div id="gallery" class="gallery">
+                <h3>Galería de Imágenes</h3>
+                <div class="imagenes">
+                    <!-- Aquí se mostrarán las imágenes subidas -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="info">
+            <p>2024- <span class="txtRojo">REALPASION FC</span> Todos los derechos reservados</p>
+            <div class="redes">
+                <a href="https://web.facebook.com/p/Real-Pasión-FC-100063746286057/?_rdc=1&_rdr">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://x.com/realpasionfcf?lang=es">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/real.pasionfc/">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@RealPasionFC">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
